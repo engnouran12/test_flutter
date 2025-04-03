@@ -43,7 +43,7 @@ String? get token=>_token;
       _token = receivedToken; // ✅ Assign the token properly
 
       await CacheHelper.saveToken(_token!);
-
+print('token after cash:$_token');
       _isLoading = false;
       _errorMessage = null;
       _message = "Login successful";
@@ -59,10 +59,7 @@ String? get token=>_token;
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(
-            builder: (context) => ChangeNotifierProvider(
-              create: (_) => OrderProvider(),
-              child: OrderScreen(),
-            ),
+            builder: (context) => OrderScreen(),
           ),
         );
       });

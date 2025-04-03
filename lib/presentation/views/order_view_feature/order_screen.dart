@@ -9,7 +9,7 @@ class OrderScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final orderProvider = Provider.of<OrderProvider>(context);
-    final detailsorder=  Provider.of<OrderDetailsProvider>(context);
+   // final detailsorder=  Provider.of<OrderDetailsProvider>(context);
 
 
 //print(ord)
@@ -26,7 +26,8 @@ class OrderScreen extends StatelessWidget {
           itemCount: orderProvider.orders.length,
           itemBuilder: (context, index) {
            // print(orderProvider.orders);
-            return OrderCard(order: orderProvider.orders[index],orderdetails: detailsorder.orderDetails!);
+            return OrderCard(order: orderProvider.orders[index]
+            );
           },
         ),
       ),

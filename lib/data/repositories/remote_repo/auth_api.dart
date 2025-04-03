@@ -5,7 +5,7 @@ import 'package:test/data/moch_api/auth_moch_api.dart';
 class AuthService{
   MockAuthService _mockAuthService=MockAuthService();
   Future<String?>login(String email,String password)async{
-    await _mockAuthService.login(email, password);
+    return await _mockAuthService.login(email, password);
 
   }
 

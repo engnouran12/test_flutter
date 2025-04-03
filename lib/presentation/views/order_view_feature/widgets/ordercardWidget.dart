@@ -8,9 +8,9 @@ import '../../order_details_feature/widgets/order_details_screen.dart';
 
 class OrderCard extends StatelessWidget {
   final Order order;
-  final OrderDetails orderdetails;
+//  final OrderDetails orderdetails;
 
-  const OrderCard({required this.order, required this.orderdetails});
+  const OrderCard({required this.order,  });
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class OrderCard extends StatelessWidget {
             SizedBox(height: 5),
             Text("Address: ${order.address}", style: TextStyle(fontSize: 16)),
             SizedBox(height: 5),
-            Text("Status: ${orderdetails.status}", style: TextStyle(fontSize: 16, color: Colors.blue)),
+            Text("Status: ${order.status}", style: TextStyle(fontSize: 16, color: Colors.blue)),
             SizedBox(height: 10),
             Align(
               alignment: Alignment.centerRight,
@@ -35,11 +35,11 @@ class OrderCard extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
     context,
-    MaterialPageRoute(builder: (context) => ChangeNotifierProvider
-      (
-        create: (_) => OrderDetailsProvider(),
-        child: OrderDetailsScreen(orderId: "123",status: order.status,))), // Pass order ID
-    );
+    MaterialPageRoute(builder: (context) =>
+        ChangeNotifierProvider(
+            create: (_) => OrderDetailsProvider(),
+        child: OrderDetailsScreen(orderId: "123",status: order.status,)) // Pass order ID
+    ));
                 },
 
                 child: Text("View Details", style: TextStyle(color: Colors.blue)),
