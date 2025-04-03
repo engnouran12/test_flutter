@@ -1,0 +1,2 @@
+F:/my works/tasks_work/test/android/app/.cxx/Debug/261i2871/armeabi-v7a/CMakeFiles/edit_cache.dir
+F:/my works/tasks_work/test/android/app/.cxx/Debug/261i2871/armeabi-v7a/CMakeFiles/rebuild_cache.dir
